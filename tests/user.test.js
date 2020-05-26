@@ -28,7 +28,6 @@ test('Should create a new user', async () => {
         mutation: createUser
     })
 
-    console.log(JSON.stringify(response, null, 2))
     const userExists = await prisma.exists.User({ id: response.data.createUser.user.id })
 
     expect(userExists).toBe(true)
