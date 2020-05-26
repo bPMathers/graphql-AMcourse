@@ -4,4 +4,4 @@
 endpoint: ${env:PRISMA_ENDPOINT}
 datamodel: datamodel.graphql
 # close Prisma API to the general public with a secret key
-secret: thisismysupersecrettext
+secret: ${env:PRISMA_SECRET}

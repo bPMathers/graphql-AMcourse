@@ -1,7 +1,9 @@
 // create & setup nodeJS graphql server
 // this file runs on npm start, as defined in package.json scripts
 
-import '@babel/polyfill'
+// import '@babel/polyfill/noConflict' > deprecated!
+import 'core-js'
+import 'regenerator-runtime/runtime'
 
 import { GraphQLServer, PubSub } from 'graphql-yoga';
 import { resolvers, fragmentReplacements } from './resolvers/index';
